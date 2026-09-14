@@ -61,14 +61,15 @@ sequenceDiagram
    ```powershell
    idf.py -p COM24 erase-flash flash monitor
    ```
-2. สังเกต Log ใน Serial Monitor จะปรากฏข้อความและ QR Code:
+2. สังเกต Log ใน Serial Monitor จะปรากฏชื่อ SoftAP, QR Code แบบ ASCII และ URL สำรอง:
    ```text
-   I (776) wifi_prov_scheme_softap: Starting SoftAP with SSID: PROV_XXXXXX
-   I (786) app: Scan this QR code from the provisioning application for Provisioning.
+   I (...) LAB7_2_SOFTAP: Starting SoftAP Provisioning (SSID: PROV_XXXXXX, PoP: abcd1234)
+   I (...) LAB7_2_SOFTAP: Scan this QR code from the provisioning application for Provisioning.
    ... [รูป QR Code แบบ ASCII Text] ...
-   I (816) app: If QR code is not visible, copy paste the below URL in a browser.
+   I (...) LAB7_2_SOFTAP: If QR code is not visible, open this URL in a browser:
    https://espressif.github.io/esp-jumpstart/qrcode.html?data={"ver":"v1","name":"PROV_XXXXXX","pop":"abcd1234","transport":"softap"}
    ```
+   หากไม่เห็น QR Code ให้ตรวจว่าเป็นเฟิร์มแวร์รุ่นล่าสุดของ Lab 7-2 และเปิด Serial Monitor ที่ baud rate `115200` หลังจากสั่ง `erase-flash flash monitor` สำเร็จ
 
 ---
 
@@ -123,24 +124,34 @@ I (19850) app: Connected with IP Address: 192.168.1.150
 ```text
 [พื้นที่สำหรับแนบรูปภาพ Sequence Diagram ที่นักศึกษาเขียนขึ้นด้วย Draw.io / Mermaid / วาดมือ]
 ```
-
+![alt text](/image/image.png)
+    
 ---
 
 ## 6. ตารางบันทึกผลการทดลอง (Experiment Results)
 
-| รายการตรวจสอบ | ค่าที่บันทึกได้จากการทดลอง |
-| :--- | :--- |
-| **1. ชื่อ SoftAP SSID ของ ESP32** | `PROV_`.............................. |
-| **2. รหัส PoP (Proof of Possession)** | ..................................................... |
-| **3. ข้อความใน QR Code Payload (JSON)** | ..................................................... |
-| **4. พฤติกรรมไฟ LED 3 (GPIO 5) ช่วงรอ vs ช่วงส่งข้อมูล** | ช่วงรอ: .......................................<br/>ช่วงส่ง: ....................................... |
-| **5. IP Address ที่ ESP32 ได้รับจาก Router** | ..................................................... |
-| **6. เวลาที่ใช้ตั้งแต่เริ่มจนจบกระบวนการ (วินาที)** | ..................................................... |
+| รายการตรวจสอบ                                            | ค่าที่บันทึกได้จากการทดลอง                                              |
+| :------------------------------------------------------- | :---------------------------------------------------------------------- |
+| **1. ชื่อ SoftAP SSID ของ ESP32**                        | `PROV_`59933F                                                           |
+| **2. รหัส PoP (Proof of Possession)**                    | abcd1234                                                                |
+| **3. ข้อความใน QR Code Payload (JSON)**                  | {"ver":"v1","name":"PROV_59933F","pop":"abcd1234","transport":"softap"} |
+| **4. พฤติกรรมไฟ LED 3 (GPIO 5) ช่วงรอ vs ช่วงส่งข้อมูล** | ช่วงรอ: กระพริบช้าๆ หรือดับ<br/>ช่วงส่ง: ติดสว่างค้าง                   |
+| **5. IP Address ที่ ESP32 ได้รับจาก Router**             | 192.168.88.88                                                           |
+| **6. เวลาที่ใช้ตั้งแต่เริ่มจนจบกระบวนการ (วินาที)**      | ประมาณ 38 วินาที                                                        |
 
 ---
 
 ## 7. คำถามท้ายการทดลอง (Post-Lab Questions)
 1. ในโหมด SoftAP Scheme สมาร์ตโฟนส่งข้อมูลหา ESP32 ผ่านโปรโตคอลและ IP Address ใด?
+	- **โปรโตคอล:** HTTP (ห่อหุ้มด้วย Protobuf ผ่านคำขอ HTTP POST)
+	- **IP Address:** ใช้ IP ของ ESP32 คือ `192.168.4.1`
+
 2. หากผู้ใช้ป้อนรหัสผ่าน Wi-Fi ผิดในแอปมือถือ จะเกิด Event ใดขึ้นบน ESP32 (`WIFI_PROV_CRED_FAIL` หรือไม่) และ ESP32 มีพฤติกรรมอย่างไร?
+	- **Event:** เกิด `WIFI_PROV_CRED_FAIL` บน ESP32
+	- **พฤติกรรม:** แจ้งเตือนความล้มเหลวไปที่แอป และยังคงเปิดโหมด SoftAP ค้างไว้เพื่อให้ผู้ใช้กรอกข้อมูลใหม่ได้ทันที
+
 3. ทำไมผู้ผลิต IoT ส่วนใหญ่จึงมองว่ากระบวนการเชื่อมต่อแบบ SoftAP มีขั้นตอนที่ยุ่งยากสำหรับผู้ใช้ทั่วไปเมื่อเทียบกับ BLE?
+	- **ต้องสลับ Wi-Fi เอง:** ผู้ใช้ต้องกดสลับไปเชื่อมต่อ SSID ชั่วคราวของอุปกรณ์ด้วยตนเอง
+	- **ระบบปฏิบัติการตีกลับ:** มือถือมักตัดการเชื่อมต่อเพราะไม่มีเน็ต หรือเด้งกลับไปใช้เน็ตมือถือ (Cellular)
+	- **หลายขั้นตอน:** ต่างจาก BLE ที่ค้นหาและส่งค่าผ่านหน้าแอปได้ทันทีโดยไม่ต้องย้ายหน้าจอตั้งค่าเน็ตเวิร์ก
 

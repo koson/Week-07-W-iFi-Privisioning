@@ -1,0 +1,238 @@
+{
+  "main": {
+    "id": "ff9ca92266e02756",
+    "type": "split",
+    "children": [
+      {
+        "id": "8d91922638a12bbd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3a4be5c1810ef0ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "09-Labsheet-07-4-Security-Schemes-and-Custom-Data.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "09-Labsheet-07-4-Security-Schemes-and-Custom-Data"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ab5c99015c3f370c",
+    "type": "split",
+    "children": [
+      {
+        "id": "d64313b2c8569c7a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9e51d5904bca8a79",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a0af3d9a13fc9ab6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "1a7e6b97ec1b44ab",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1c166578da1195d3",
+    "type": "split",
+    "children": [
+      {
+        "id": "5ad00c07323f68fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cbb0ff6a73247f41",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "06-Labsheet-07-1-Reset-Mechanisms-and-NVS-Forensics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "75512a9d351baed5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "06-Labsheet-07-1-Reset-Mechanisms-and-NVS-Forensics.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "195b95a757a58854",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "cddbe5af5059cb0b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "4e17c89e2630a501",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "06-Labsheet-07-1-Reset-Mechanisms-and-NVS-Forensics.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "3a4be5c1810ef0ba",
+  "lastOpenFiles": [
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/esp-idf/esp_driver_sdspi/CMakeFiles/__idf_esp_driver_sdspi.dir/src/sdspi_transaction.c.obj",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/esp-idf/esp_driver_sdspi/CMakeFiles/__idf_esp_driver_sdspi.dir/src/sdspi_host.c.obj",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/esp-idf/esp_driver_sdspi/CMakeFiles/__idf_esp_driver_sdspi.dir/src/sdspi_crc.c.obj",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/esp-idf/esp_driver_sdspi/CMakeFiles/__idf_esp_driver_sdspi.dir/src",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/esp-idf/esp_driver_sdspi/CMakeFiles/__idf_esp_driver_sdspi.dir",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/log/idf_py_stdout_output_10204",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/log/idf_py_stderr_output_10204",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/log/idf_py_stdout_output_21028",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/log/idf_py_stderr_output_21028",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/log/idf_py_stdout_output_35624",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/build/log/idf_py_stderr_output_35624",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__network_provisioning/tool/esp_prov/README.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__network_provisioning/examples/wifi_prov/README.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__network_provisioning/examples/thread_prov/README.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__network_provisioning/proto/README.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__network_provisioning/examples/README.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__network_provisioning/README.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__network_provisioning/CHANGELOG.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/tests/unity/docs/UnityHelperScriptsGuide.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/tests/unity/docs/UnityGettingStartedGuide.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/tests/unity/docs/UnityConfigurationGuide.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/tests/unity/docs/UnityAssertionsReference.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/tests/unity/docs/ThrowTheSwitchCodingStandard.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/tests/unity/README.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/tests/json-patch-tests/README.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/SECURITY.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/README.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/CONTRIBUTORS.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/cJSON/CHANGELOG.md",
+    "Example_codes/Lab7-4-Custom-Data-and-Security/managed_components/espressif__cjson/README.md",
+    "08-Labsheet-07-3-BLE-Provisioning-and-GATT-Forensics.md",
+    "image/image.png",
+    "image/image-3.png",
+    "image/image-2.png",
+    "image/image-1.png",
+    "image-3.png",
+    "image-2.png",
+    "image-1.png",
+    "Example_codes/Lab7-3-BLE-Provisioning/managed_components/espressif__network_provisioning/tool/esp_prov/README.md",
+    "Example_codes/Lab7-3-BLE-Provisioning/managed_components/espressif__network_provisioning/proto/README.md",
+    "Example_codes/Lab7-3-BLE-Provisioning/managed_components/espressif__network_provisioning/examples/wifi_prov/README.md",
+    "Example_codes/Lab7-3-BLE-Provisioning/managed_components/espressif__network_provisioning/examples/thread_prov/README.md",
+    "Example_codes/Lab7-3-BLE-Provisioning/managed_components/espressif__network_provisioning/examples/README.md",
+    "image.png"
+  ]
+}
